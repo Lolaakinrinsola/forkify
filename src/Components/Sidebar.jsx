@@ -5,11 +5,14 @@ const Sidebar = (props) => {
   const [rightButton, setRightButton] = useState(false);
   const [page, setPage] = useState(1);
   const [start, setstart] = useState(true)
+  const [close, setclose] = useState(true)
 
 
   useEffect(() => {
-    if (props.search) setstart(false)
-  }, [])
+    if (props.search) 
+      setstart(false)
+      setclose(true)
+  }, [props.search])
   
   console.log(start)
   useEffect(() => {
@@ -66,7 +69,8 @@ const Sidebar = (props) => {
   }
   console.log(props.search)
   return (
-    <div className={`bg-white-10 min-w-1/5 justify-between md:grid min-h-screen ${!start? 'relative z-20 ':'hidden '}`}>
+    <div className={`absolute w-screen h-screen bg-greyDark-10/30 z-20 ${!close&& 'hidden'}`} onClick={()=>{setclose(!close)}}>
+    {close && <div className={`bg-white-10 min-w-1/5 justify-between md:grid min-h-screen ${!start? 'absolute ':'hidden '}`}>
       {start && <p className="pt-[10rem] text-center">search for recipes</p>}
       {Error()}
       {subSearch.map((ser) => (
@@ -92,6 +96,8 @@ const Sidebar = (props) => {
             {leftButton && (<p onClick={()=>{setPage(page-1) }} >left {page-1}</p>)}
             {rightButton && (<p onClick={()=>{setPage(page+1)}}>right {page+1}</p>)}
         </div>
+    </div>}
+
     </div>
   );
 };

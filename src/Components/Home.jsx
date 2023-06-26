@@ -19,8 +19,8 @@ const Home = (props) => {
           <div className="bg-gradient-to-r from-grad-10 to-grad-20 m-auto transform skew-y-12 p-[1em] w-fit">
             <p className="">{props.title}</p>
           </div>
-          <div className="grid">
-            <div className="flex space-x-[2rem] w-full">
+          <div className="grid ">
+            <div className="flex justify-between px-10 w-full py-5">
               <div>
                 <p>{`${props.cookingTime} MINUTES`}</p>
               </div>
@@ -29,7 +29,6 @@ const Home = (props) => {
                 <div></div>
               </div>
 
-              <div></div>
             </div>
 
             <div className="bg-greyLight-20 py-[2em] justify-center ">
