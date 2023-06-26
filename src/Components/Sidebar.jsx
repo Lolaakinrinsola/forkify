@@ -65,6 +65,7 @@ const Sidebar = (props) => {
         </div>
       );
   };
+  
   console.log(props.search);
   return (
     <>
