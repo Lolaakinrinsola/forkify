@@ -13,7 +13,7 @@ const Home = (props) => {
         </div>
       ) : (
         <div>
-          <div className="relative">
+          <div className="relative ">
             <img src={props.image} alt="food image" className="min-w-[100%] max-h-[400px]"/>
           <div className="bg-gradient-to-r from-grad-10 to-grad-20 m-auto p-[1em] w-fit absolute bottom-[-2rem] right-[25vw]">
             <p className="">{props.title}</p>

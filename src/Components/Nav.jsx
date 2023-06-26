@@ -49,10 +49,10 @@ const Nav = (props) => {
         {open &&(
           <div>
             <div
-              className="absolute h-full w-screen top-0 left-0 bg-[#000000] bg-opacity-[60%]"
+              className="absolute h-full w-screen top-0 left-0 bg-[#000000] bg-opacity-[60%] z-30"
               onClick={() => setopen(!open)}
             ></div>
-            <div className=" pb-[2em] w-2/3 bg-white-10 absolute top-0 right-0 rounded-2xl">
+            <div className=" pb-[2em] w-2/3 bg-white-10 absolute top-0 right-0 rounded-2xl z-40">
               <div className="mt-[2em] grid justify-end items-end mr-[2em] ">
                 <AiOutlineClose
                   size="30px"
