@@ -68,18 +68,26 @@ const Sidebar = (props) => {
   console.log(props.search);
   return (
     <>
-      <div className="md:hidden overflow-y-auto">
+      <div className="md:hidden ">
+        <div className="relative">
+
+        <BsFillArrowLeftCircleFill onClick={() => {
+            setclose(!close);
+          }} className={`${close?'hidden':'block'} absolute text-[2rem] left-3 top-3 text-primary-10 cursor-pointer`}/>
+        </div>
+        {close && 
+        <>
         <div
-          className={`absolute w-screen h-screen bg-greyDark-10/30 z-10 ${
+          className={`absolute w-screen min-h-screen bg-greyDark-10/30 z-10 ${
             !close && "hidden"
           }`}
           onClick={() => {
             setclose(!close);
           }}
         >
-          {close && (
+        </div>
             <div
-              className={`bg-white-10 min-w-1/5 justify-between md:grid min-h-screen z-50 ${!start? 'absolute ':'hidden '}`}
+              className={`bg-white-10 min-w-1/5 justify-between md:grid min-h-full overflow-y-auto z-50 ${props.query? 'absolute ':'hidden '}`}
             >
               {start && (
                 <p className="pt-[10rem] text-center">search for recipes</p>
@@ -109,7 +117,7 @@ const Sidebar = (props) => {
                 </div>
               ))}
 
-              <div className="flex justify-between">
+              <div className="flex justify-between p-10">
                 {leftButton && (
                   <p
                     className="cursor-pointer"
@@ -132,8 +140,8 @@ const Sidebar = (props) => {
                 )}
               </div>
             </div>
-          )}
-        </div>
+        </>
+        }
       </div>
       <div className="hidden md:grid">
         <div

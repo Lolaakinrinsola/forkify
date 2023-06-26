@@ -3,7 +3,6 @@ import "./App.css";
 import Home from "./Components/Home";
 import Nav from "./Components/Nav";
 import Sidebar from "./Components/Sidebar";
-import { FaBeer } from 'react-icons/fa'
 
 
 function App() {
