@@ -73,7 +73,7 @@ function App() {
   const trying= recipes.ingredients;
   
   return (
-    <div className="m-[5rem] ">
+    <div className="md:m-[5rem] w-screen">
       <Nav 
       Query={setQuery}
       Submit={setSubmitValue}

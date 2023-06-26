@@ -66,7 +66,7 @@ const Sidebar = (props) => {
   }
   console.log(props.search)
   return (
-    <div className="hidden bg-white-10 min-w-1/5 min-h-screen md:grid justify-between ">
+    <div className={`bg-white-10 min-w-1/5 justify-between md:grid min-h-screen ${!start? 'relative z-20 ':'hidden '}`}>
       {start && <p className="pt-[10rem] text-center">search for recipes</p>}
       {Error()}
       {subSearch.map((ser) => (

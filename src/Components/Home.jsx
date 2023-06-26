@@ -6,7 +6,7 @@ const Home = (props) => {
   const list= props.ingredients
 
   return (
-    <div className="bg-greyLight-10 w-4/5 ">
+    <div className="bg-greyLight-10 md:w-4/5 w-screen">
       {!list ? (
         <div className="text-center">
           <p>Search over 10000 recipes</p>

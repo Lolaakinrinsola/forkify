@@ -18,12 +18,12 @@ const Nav = (props) => {
   }
 
   return (
-    <div className="flex bg-greyLight-10 py-[1em] px-[2em] lg:px-[5em] items-center justify-between">
+    <div className="flex bg-greyLight-10 py-[1em] px-2 md:px-[2em] lg:px-[5em] items-center gap-3 justify-between">
       <img src={logo} alt="logo" className="w-[70px] h-[35px]" />
       <form className="flex h-[2.5em] space-x-1 md:space-x-5" onSubmit={submitSearched}>
         <input
           type="text"
-          className="rounded-full bg-white-10 lg:w-[20em] px-[1em]"
+          className="rounded-full bg-white-10 lg:w-[20em] px-[1em] w-[10em]"
           name="input"
           onChange={(e) => {
             setInput(e.target.value);
