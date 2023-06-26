@@ -74,7 +74,7 @@ const Sidebar = (props) => {
 
         <BsFillArrowLeftCircleFill onClick={() => {
             setclose(!close);
-          }} className={`${close?'hidden':'block'} absolute text-[2rem] left-3 top-3 text-primary-10 cursor-pointer`}/>
+          }} className={`${close?'hidden':'block'} absolute text-[2rem] left-3 top-3 text-primary-10 cursor-pointer z-50`}/>
         </div>
         {close && 
         <>

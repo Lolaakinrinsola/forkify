@@ -13,14 +13,14 @@ const Home = (props) => {
         </div>
       ) : (
         <div>
-          <div className="">
+          <div className="relative">
             <img src={props.image} alt="food image" className="min-w-[100%] max-h-[400px]"/>
-          </div>
-          <div className="bg-gradient-to-r from-grad-10 to-grad-20 m-auto transform skew-y-12 p-[1em] w-fit">
+          <div className="bg-gradient-to-r from-grad-10 to-grad-20 m-auto p-[1em] w-fit absolute bottom-[-2rem] right-[25vw]">
             <p className="">{props.title}</p>
           </div>
+          </div>
           <div className="grid ">
-            <div className="flex justify-between px-10 w-full py-5">
+            <div className="flex justify-between px-10 w-full py-5 mt-10">
               <div>
                 <p>{`${props.cookingTime} MINUTES`}</p>
               </div>
