@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./Components/Home";
 import Nav from "./Components/Nav";
 import Sidebar from "./Components/Sidebar";
+import { FaBeer } from 'react-icons/fa'
 
 
 function App() {
@@ -73,7 +74,7 @@ function App() {
   const trying= recipes.ingredients;
   
   return (
-    <div className="md:m-[5rem] w-screen">
+    <div className="md:m-[5rem] ">
       <Nav 
       Query={setQuery}
       Submit={setSubmitValue}
